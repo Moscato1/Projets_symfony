@@ -1,0 +1,39 @@
+
+header{
+    height:100vh;
+    background-image: url(../img/wallpaper/zoltan-tasi-7qhm0GNurTc.jpg);
+   
+    background-size: cover ;
+    margin: 0 ;
+}
+
+
+#myName h2{
+    position: absolute;
+top: 40%;
+left: 30%;
+font-size: 3rem;
+font-weight: 100;
+}
+#myName h1{
+    position: absolute;
+    top: 50%;
+    right: 20%;
+    font-size: 2rem;
+    font-weight: 100;
+}
+
+img {
+    width: 50px;
+    aspect-ratio: 1/1;
+    object-fit: contain;
+}
+main{
+   
+    background-color: grey;
+}
+
+.skills{
+   margin-left: 3vw;
+}
+

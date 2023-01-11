@@ -1,0 +1,28 @@
+/* **************************************** MAIN **************************************** */
+
+
+
+    table img {
+        width: 50px;
+        aspect-ratio: 1/1;
+        object-fit: contain;
+    }
+
+
+
+
+    header{
+        
+        background: darkslategray;
+        padding-bottom: 0 ;
+    }
+
+    main{
+height: 100vh;
+    }
+    
+/* **************************************** FOOTER **************************************** */
+
+footer p {
+    font-size: 0.75em;
+}

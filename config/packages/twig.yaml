@@ -1,6 +1,13 @@
 twig:
     default_path: '%kernel.project_dir%/templates'
-
+    globals:
+        contact_name: "Maxence Mairesse"
+        contact_adress: "9 rue Pierre Semard"
+        contact_zip: "59730"
+        contact_city: " Solemses"
+        contact_phone: "06 '5 42 45 95"
+        contact_email: "mairesse.maxence59@gmail.com"
+    form_themes: ['bootstrap_5_layout.html.twig']
 when@test:
     twig:
         strict_variables: true

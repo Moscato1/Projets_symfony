@@ -1,0 +1,48 @@
+{% extends "baseAdmin.html.twig" %}
+
+{% block title %}
+    Categories
+{% endblock  %}
+
+{% block body %}
+    <h1>Liste des categories </h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>N°</th>
+                <th>Nom</th>
+                <th>Categories</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for competence in competences %}
+                
+            <tr>
+                <td>{{loop.index}}</td>
+                <td>
+                    {% if competence.img %}
+                        <img src="{{asset('img/competence/' ~ competence.img)}}" alt="Image de la categorie {{competence.title}}">
+                    {% endif %}{{competence.title}}</td>
+                <td>{{competence.category}}</td>
+                <td>
+                    <a href="{{ path('competence_update', {'id': competence.id}) }}" class="bi bi-pencil-square text-primary"></a>
+                    <a href="{{ path('competence_delete', {'id': competence.id}) }}" class="bi bi-trash text-danger " onclick="return confirm('Êtes-vous sûr de vouloir supprimer cette catégorie ?')"></a>
+                </td>
+                
+            </tr>
+
+        
+            {% else %}
+            <tr>
+                <td colspan="4">Aucune catégories trouvée</td>
+            </tr>
+            
+            {% endfor %}
+        </tbody>
+        <div class="text-end mt-4">
+            <a href="{{ path('competence_create') }}" class="btn  btn-success"> Ajouter un categorie</a>
+        </div>
+    </table>
+{% endblock  %}

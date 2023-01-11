@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Portfolio {% endblock %}
+
+
+
+
+{% block body %}
+<div class="skills">
+    <h2 class="fw-lighter text-white pt-5">Competences</h2>
+
+
+
+    <div class="row pt-5 ms-3 fw-light text-light  SkillList">
+        <div class="col-4 ">
+            <h2 class="fw-light">Technologies</h2>
+            <hr class="hr w-50">
+            {% for competence in competences %}
+            {% if competence.category == 'Technologie' %}
+            <p><img class="me-2" src="{{asset('img/competence/' ~ competence.img)}}" alt="">{{competence.title}}</p>
+            {% endif %}
+            {% endfor %}
+        </div>
+        <div class="col-4">
+            <h2 class="fw-light ">Framework</h2>
+            <hr class="hr w-50">
+            {% for competence in competences %}
+            {% if competence.category == 'Framework' %}
+            <p><img class="me-2" src="{{asset('img/competence/' ~ competence.img)}}" alt="">{{competence.title}}</p>
+            {% endif %}
+            {% endfor %}
+        </div>
+        <div class="col-4">
+            <h2 class="fw-light">CMS</h2>
+            <hr class="hr w-50 ">
+            {% for competence in competences %}
+            {% if competence.category == 'CMS' %}
+            <p><img class="me-2" src="{{asset('img/competence/' ~ competence.img)}}" alt="">{{competence.title}}</p>
+            {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+
+</div>
+
+
+{% endblock %}
